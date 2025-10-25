@@ -179,10 +179,8 @@ struct ll_node *ll_remove(struct ll_node *head, int value) {
     while (curr != NULL) {
         if (curr->data == value) {
             if (prev) {
-                // remove non-head node
                 prev->next = curr->next;
             } else {
-                // remove head
                 head = curr->next;
             }
             free(curr);
